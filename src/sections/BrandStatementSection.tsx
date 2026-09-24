@@ -60,11 +60,13 @@ export const BrandStatementSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="space-y-1.5"
+          className="space-y-3 flex flex-col items-center justify-center"
         >
-          <div className="text-2xl sm:text-3xl font-extrabold tracking-widest text-white">
-            SPITY
-          </div>
+          <img
+            src="/spity-logo-transparent.png"
+            alt="SPITY"
+            className="h-14 sm:h-16 w-auto object-contain mx-auto filter drop-shadow-[0_0_24px_rgba(139,92,246,0.35)]"
+          />
           <div className="text-sm sm:text-base font-mono text-zinc-400 tracking-wider">
             Learn. Build. Become.
           </div>

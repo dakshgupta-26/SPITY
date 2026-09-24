@@ -13,15 +13,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 pb-12 border-b border-white/[0.06]">
           {/* Brand Info (2 columns on md) */}
           <div className="col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-700 p-[1px]">
-                <div className="w-full h-full bg-[#09090D] rounded-[7px] flex items-center justify-center">
-                  <span className="font-bold text-sm text-white">S</span>
-                </div>
-              </div>
-              <span className="font-extrabold text-base tracking-tight text-white">
-                SPITY
-              </span>
+            <div className="flex items-center">
+              <img
+                src="/spity-logo-transparent.png"
+                alt="SPITY"
+                className="h-8 w-auto object-contain"
+              />
             </div>
 
             <p className="text-zinc-400 text-xs leading-relaxed max-w-sm">
