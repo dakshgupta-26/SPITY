@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --bg-primary: #050505;
+    --bg-secondary: #09090c;
+    --bg-tertiary: #0e0e14;
+    --bg-card: rgba(15, 15, 20, 0.65);
+    --bg-card-hover: rgba(22, 22, 30, 0.85);
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.18);
+    --border-glow: rgba(139, 92, 246, 0.4);
+
+    --accent: #8b5cf6;
+    --accent-light: #a78bfa;
+    --accent-glow: rgba(139, 92, 246, 0.25);
+    --accent-cyan: #38bdf8;
+  }
+
+  * {
+    border-color: var(--border-subtle);
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color-scheme: dark;
+    background-color: #050505;
+    color: #f3f4f6;
+  }
+
+  body {
+    background-color: #050505;
+    color: #f3f4f6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* Subtle Technical Grid Background */
+.bg-grid-subtle {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+}
+
+.bg-radial-hero {
+  background: radial-gradient(circle at 50% 30%, rgba(124, 58, 237, 0.12) 0%, rgba(56, 189, 248, 0.04) 40%, rgba(5, 5, 5, 0) 75%);
+}
+
+/* Glassmorphism with crisp hairline */
+.glass-panel {
+  background: rgba(12, 12, 16, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(18, 18, 25, 0.8);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Custom Text Gradient */
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 40%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar for clean horizontal carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
